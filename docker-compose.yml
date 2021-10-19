@@ -1,0 +1,23 @@
+version: '2'
+services:
+    
+  postgres:
+    image: postgres:13-alpine
+    restart: always
+    ports:
+      - "5432"
+    volumes:
+     - postgres_data:/var/lib/postgresql/data
+     
+  spotifycontest:
+    build: ./spotifycontest
+    restart: on-failure
+
+  pgAdmin:
+    image: dpage/pgadmin4:2021-10-06-2
+    restart: always
+    ports:
+      - "80"
+     
+volumes:
+  postgres_data:
