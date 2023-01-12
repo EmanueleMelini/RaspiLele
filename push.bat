@@ -1,3 +1,4 @@
 @echo off
-balena push RaspiLele -G --convert-eol
+balena push RaspiLele
+::-G --convert-eol
 pause

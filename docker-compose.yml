@@ -13,6 +13,10 @@ services:
     build: ./spotifycontest
     restart: on-failure
 
+  utilsbot:
+    build: ./utilsbot
+    restart: on-failure
+
   pgAdmin:
     image: dpage/pgadmin4:2021-10-06-2
     restart: always

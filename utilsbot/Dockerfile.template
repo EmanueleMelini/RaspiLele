@@ -1,0 +1,5 @@
+FROM balenalib/raspberrypi4-64-openjdk:17
+
+COPY UtilsBot.jar utilsbot.jar
+
+CMD ["java", "-jar", "utilsbot.jar"]
