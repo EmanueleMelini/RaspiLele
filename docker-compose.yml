@@ -2,23 +2,23 @@ version: '2'
 services:
     
   postgres:
-    image: postgres:13-alpine
+    image: postgres:15.1
     restart: always
     ports:
-      - "5432"
+      - "5432:5432"
     volumes:
      - postgres_data:/var/lib/postgresql/data
      
-  spotifycontest:
-    build: ./spotifycontest
-    restart: on-failure
+  #spotifycontest:
+    #build: ./spotifycontest
+    #restart: on-failure
 
   utilsbot:
     build: ./utilsbot
     restart: on-failure
 
   pgAdmin:
-    image: dpage/pgadmin4:2021-10-06-2
+    image: dpage/pgadmin4:6.19
     restart: always
     ports:
       - "80"
